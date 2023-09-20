@@ -1,92 +1,121 @@
 /* index.css */
 
-/* Global styles for the entire application */
+/* ... Your existing styles ... */
+
+/* Cute Button Styles */
+.generate-button {
+  color: #fff; /* White text color */
+  background-color: #ff69b4; /* Cute pink button background */
+  padding: 8px 16px; /* Adjust padding for a smaller button */
+  border: none; /* Remove the border */
+  border-radius: 12px; /* Slightly rounded corners */
+  font-weight: bold;
+  font-size: 16px; /* Slightly smaller font size for buttons */
+  text-decoration: none;
+  margin: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth button transition */
+}
+
+.generate-button:hover {
+  background-color: #ff1a75; /* Darker pink background on hover */
+}
+
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Helvetica Neue', sans-serif; /* Sans-serif font for a less round look */
+  background-color: #c4e0e5; /* Baby blue background color */
   margin: 0;
   padding: 0;
-  background-color: #f0f0f0;
 }
 
-/* Header styles */
+/* App Styles */
 .App {
   text-align: center;
-  padding: 20px;
 }
 
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+  margin: 20px 0; /* Add some margin to the logo */
+}
+
+
+/* Cute Cat Animation */
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+
 .App-header {
-  background-color: #282c34;
+  background-color: #ffb6c1; /* Cute pink header background */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: white;
+  font-size: 20px; /* Larger font size for a cuter look */
+  color: #3f51b5; /* Soft pastel blue text color */
 }
 
-/* Title styles */
-.App-title {
-  font-size: 2.5em;
-  margin-bottom: 20px;
+/* Button Container Styles */
+.nav-button-container {
+  margin: 10px 0; /* Add space between the buttons and stack them vertically */
 }
 
-/* Navigation styles */
-.App-nav {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-}
-
-.App-nav li {
-  margin-right: 20px;
-}
-
-.App-nav a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  font-size: 1.2em;
-}
-
-.App-nav a:hover {
-  text-decoration: underline;
-}
-
-/* Button styles */
-button {
+/* Button Styles */
+.nav-button {
+  color: #fff; /* White text color */
   padding: 10px 20px;
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1.2em;
+  border-radius: 20px; /* Rounded button corners */
+  font-weight: 500; /* Slightly bolder font weight */
+  font-size: 20px; /* Slightly larger font size for buttons */
+  text-decoration: none;
+  margin: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth button transition */
+  display: block; /* Display as block for stacked appearance */
 }
 
-button:hover {
-  background-color: #0056b3;
+/* Pink Button */
+.nav-button.pink {
+  background-color: #ff69b4; /* Cute pink button background */
 }
 
-/* Dropdown styles */
-.FilterImg-dropdown {
-  padding: 10px;
-  font-size: 1.2em;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+/* Purple Button */
+.nav-button.purple {
+  background-color: #9c27b0; /* Purple button background */
 }
 
-/* Image container styles */
-.RandomImg-image,
-.FilterImg-image {
-  max-width: 150px;
-  margin: 20px auto;
-  height: 200px; /* Set a fixed height for the image container */
-  overflow: hidden; /* Hide overflowing content */
+/* Blue Button */
+.nav-button.blue {
+  background-color: #2196f3; /* Blue button background */
 }
 
-.RandomImg-image img,
-.FilterImg-image img {
-  max-width: 100%;
-  height: auto;
+.nav-button:hover {
+  color: #fff; /* White text color on hover */
+}
+
+/* Button Hover Styles */
+.nav-button.pink:hover {
+  background-color: #ff1a75; /* Darker pink background on hover */
+}
+
+.nav-button.purple:hover {
+  background-color: #7b1fa2; /* Darker purple background on hover */
+}
+
+.nav-button.blue:hover {
+  background-color: #1976d2; /* Darker blue background on hover */
+}
+
+/* Cute Cat Spin Animation */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

@@ -2,31 +2,31 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import RandomImg from './RandomImg';
 import FilterImg from './FilterImg';
-import './index.css'; 
+import './index.css';
 
 function Home() {
-  return <h1>Home</h1>;
+  return <h1></h1>;
 }
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>purr</h1>
+        <h1>Purrfect cats</h1>
         <Router>
           <div>
-            <nav>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/about">Random Image</Link>
-              </li>
-              <li>
-                <Link to="/filter">Filter Image</Link>
-              </li>
-            </nav>
+            <div className="nav-button-container">
+            <Link to="/" className="nav-button pink">
+  Home
+</Link>
+<Link to="/about" className="nav-button purple">
+  Random Image
+</Link>
+<Link to="/filter" className="nav-button blue">
+  Filter Image
+</Link>
 
+            </div>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<RandomImg />} />

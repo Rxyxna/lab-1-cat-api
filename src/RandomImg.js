@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
@@ -29,10 +28,18 @@ function RandomImg() {
 
   return (
     <div>
-      <button onClick={getRandomCatImage}>Generate cat image</button>
-      <div style={{ maxWidth: '150px', margin: '0 auto' }}>
-        {catImageUrl && <img src={catImageUrl} alt="Random Cat" style={{ width: '100%' }} />}
+      <div style={{ maxWidth: '250px', margin: '0 auto', marginBottom: '20px' }}>
+        {catImageUrl && (
+          <img
+            src={catImageUrl}
+            alt="Random Cat"
+            style={{ width: '100%', border: 'none' }}
+          />
+        )}
       </div>
+      <button className="generate-button" onClick={getRandomCatImage}>
+        Generate
+      </button>
     </div>
   );
 }

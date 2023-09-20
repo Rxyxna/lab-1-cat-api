@@ -59,9 +59,17 @@ function FilterImg() {
           ))}
         </select>
       </div>
-      <button onClick={getCatImageByBreed}>Generate New Cat Image</button>
-      <div style={{ maxWidth: '150px', margin: '0 auto' }}>
-        {catImageUrl && <img src={catImageUrl} alt="Random Cat" style={{ width: '100%' }} />}
+      <button className="generate-button" onClick={getCatImageByBreed}>
+        Generate New Cat Image
+      </button>
+      <div style={{ maxWidth: '250px', margin: '0 auto', marginBottom: '20px' }}>
+        {catImageUrl && (
+          <img
+            src={catImageUrl}
+            alt="Random Cat"
+            style={{ width: '100%', border: 'none' }}
+          />
+        )}
       </div>
     </div>
   );
